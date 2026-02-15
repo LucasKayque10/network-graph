@@ -28,5 +28,7 @@
                 "LucasBarros\\Network\\NetworkServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
