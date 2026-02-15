@@ -1,0 +1,32 @@
+{
+    "name": "lucas-barros/network-graph",
+    "description": "Gráficos de rede com visJs no livewire",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LucasBarros\\Network\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Lucas Barros",
+            "email": "lukaskayque@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10|^11|^12",
+        "livewire/livewire": "^3.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LucasBarros\\Network\\NetworkServiceProvider"
+            ]
+        }
+    }
+}
