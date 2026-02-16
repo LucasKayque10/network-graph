@@ -35,8 +35,8 @@
 
             <div id="node-popup-content"
                 style="
-                    max-height:600px;
-                    margin:5% auto;
+                    max-height:70vh;
+                    margin-top:5% auto;
                     position:relative;
                     overflow-y: auto;
                 "></div>
