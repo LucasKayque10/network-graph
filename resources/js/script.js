@@ -58,7 +58,7 @@ function networkGraph(nodes, edges, options) {
                     const node = this.datasetNodes.get(params.nodes[0]);
 
                     if (node?.popup_title && node?.popup_html) {
-                        showNodePopup(node.popuo_title, node.popup_html);
+                        showNodePopup(node.popup_title, node.popup_html);
                     }
 
                 }, 220); // janela para double click
