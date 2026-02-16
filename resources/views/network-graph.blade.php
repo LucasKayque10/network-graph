@@ -30,8 +30,16 @@
                     style="position:absolute; top:8px; right:8px;">
                 ✕
             </button>
+            
+            <h2  id="node-popup-title" class="text-lg font-bold mb-2"></h2>
 
-            <div id="node-popup-content"></div>
+            <div id="node-popup-content"
+                style="
+                    max-height:600px;
+                    margin:5% auto;
+                    position:relative;
+                    overflow-y: auto;
+                "></div>
         </div>
     </div>
 </div>

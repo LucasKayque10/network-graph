@@ -269,8 +269,9 @@ class Node
         return $this;
     }
 
-    public function popup(string $html): static
+    public function popup(string $title, string $html): static
     {
+        $this->data['popup_title'] = $title;
         $this->data['popup_html'] = $html;
         return $this;
     }

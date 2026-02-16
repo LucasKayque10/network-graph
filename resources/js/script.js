@@ -1,5 +1,6 @@
 
-function showNodePopup(html) {
+function showNodePopup(title, html) {
+    document.getElementById('node-popup-title').innerHTML = title;
     document.getElementById('node-popup-content').innerHTML = html;
     document.getElementById('node-popup').style.display = 'block';
 }
@@ -56,8 +57,8 @@ function networkGraph(nodes, edges, options) {
                 this.clickTimer = setTimeout(() => {
                     const node = this.datasetNodes.get(params.nodes[0]);
 
-                    if (node?.popup_html) {
-                        showNodePopup(node.popup_html);
+                    if (node?.popup_title && node?.popup_html) {
+                        showNodePopup(node.popuo_title, node.popup_html);
                     }
 
                 }, 220); // janela para double click
