@@ -34,7 +34,9 @@ function networkGraph(nodes, edges, options) {
             );
 
             // Ajusta a rede à tela ao carregar
-            this.instance.fit({ animation: true });
+            this.instance.once("stabilized", () => {
+                this.instance.fit({ animation: true });
+            });
 
             // -------------------------
             // DRAG CONTROL
