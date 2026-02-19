@@ -24,18 +24,34 @@ function networkGraph(nodes, edges, options) {
             this.datasetNodes = new vis.DataSet(nodes);
             const datasetEdges = new vis.DataSet(edges);
 
+            // Guarda physics original
+            const originalPhysics = options.physics ?? { enabled: false };
+
+            // Clona options e força physics ligado no início
+            const initialOptions = {
+                ...options,
+                physics: {
+                    enabled: true,
+                }
+            };
+
             this.instance = new vis.Network(
                 this.$refs.canvas,
                 {
                     nodes: this.datasetNodes,
                     edges: datasetEdges,
                 },
-                options
+                initialOptions
             );
 
             // Ajusta a rede à tela ao carregar
             this.instance.once("stabilized", () => {
                 this.instance.fit({ animation: true });
+
+                // Agora aplica o physics real que veio em options
+                this.instance.setOptions({
+                    physics: originalPhysics
+                });
             });
 
             // -------------------------
