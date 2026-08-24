@@ -79,7 +79,14 @@ function networkGraph(nodes, edges, options) {
                     const node = this.datasetNodes.get(params.nodes[0]);
 
                     if (node?.popup_title && node?.popup_html) {
-                        showNodePopup(node.popup_title, node.popup_html);
+                        window.dispatchEvent(new CustomEvent('network-node-popup', {
+                            detail: {
+                                title: node.popup_title,
+                                html: node.popup_html,
+                                node: node,
+                            }
+                        }));
+                        //showNodePopup(node.popup_title, node.popup_html);
                     }
 
                 }, 220); // janela para double click

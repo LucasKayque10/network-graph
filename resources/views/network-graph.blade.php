@@ -6,6 +6,12 @@
         x-init="render()"
         x-on:network-refresh.window="render()"
         x-on:network-focus.window="focus($event.detail.id)"
+        x-on:network-node-popup.window="
+            showNodePopup(
+                $event.detail.title,
+                $event.detail.html
+            )
+        "
         style="height:70vh"
         x-ref="canvas">
     </div>
