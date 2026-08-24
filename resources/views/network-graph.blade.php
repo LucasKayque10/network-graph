@@ -46,7 +46,7 @@
 
 @once
 
-<script>{!! filament_network_asset('vis-network-min.js') !!}</script>
-<script>{!! filament_network_asset('script.js') !!}</script>
+<script>{!! network_asset('vis-network-min.js') !!}</script>
+<script>{!! network_asset('script.js') !!}</script>
 
 @endonce
